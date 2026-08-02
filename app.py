@@ -244,7 +244,7 @@ if page == "Executive Overview":
 elif page == "Data Quality":
     st.subheader("Data Quality Center")
 
-    duplicate_rows = int(data.duplicated().sum())
+    duplicate_rows = int(data[REQUIRED_COLUMNS].duplicated().sum())
     duplicate_ids = int(data["User_ID"].duplicated().sum())
     missing_total = int(data[REQUIRED_COLUMNS].isna().sum().sum())
     missing_pct = missing_total / (len(data) * len(REQUIRED_COLUMNS)) * 100 if len(data) else 0
