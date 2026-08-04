@@ -8,7 +8,7 @@ from itertools import combinations
 from io import BytesIO
 
 st.set_page_config(
-    page_title="Google Product Intelligence",
+    page_title="Product Adoption & User Behavior Analytics Platform",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -123,7 +123,7 @@ def safe_pct(a, b):
     return (a / b * 100) if b else 0
 
 # ---------------- Sidebar ----------------
-st.sidebar.markdown("## 📊 Google Product Intelligence")
+st.sidebar.markdown("## 📊 Product Adoption & User Behavior Analytics Platform")
 st.sidebar.caption("User Adoption & Product Analytics Platform")
 
 uploaded = st.sidebar.file_uploader("Upload another CSV", type=["csv"])
@@ -160,7 +160,7 @@ filtered = data[
 ].copy()
 
 # ---------------- Header ----------------
-st.markdown('<div class="main-header">Google Product Intelligence</div>', unsafe_allow_html=True)
+st.markdown('<div class="main-header">Product Adoption & User Behavior Analytics Platform</div>', unsafe_allow_html=True)
 st.markdown(
     '<div class="sub-header">Interactive user adoption, engagement, satisfaction and product ecosystem analytics</div>',
     unsafe_allow_html=True
